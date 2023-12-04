@@ -19,8 +19,20 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/days"
-            android:layout_width="50dp"
+            android:id="@+id/days1"
+            android:layout_width="30dp"
+            android:backgroundTint="@color/back"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:layout_height="50dp"
+            android:background="@drawable/round_back" />
+
+        <TextView
+            android:id="@+id/days2"
+            android:layout_width="30dp"
+            android:layout_marginLeft="4dp"
             android:backgroundTint="@color/back"
             android:textStyle="bold"
             android:textColor="#FFFFFF"
@@ -41,12 +53,24 @@
 
 
         <TextView
-            android:id="@+id/hours"
+            android:id="@+id/hours1"
+            android:layout_width="30dp"
+            android:backgroundTint="@color/back"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:layout_height="50dp"
+            android:background="@drawable/round_back" />
+
+        <TextView
+            android:id="@+id/hours2"
             android:textColor="#FFFFFF"
             android:backgroundTint="@color/back"
+            android:layout_marginLeft="4dp"
             android:textSize="30sp"
             android:textStyle="bold"
-            android:layout_width="50dp"
+            android:layout_width="30dp"
             android:textAlignment="center"
             android:layout_height="50dp"
             android:background="@drawable/round_back" />
@@ -62,12 +86,24 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/minutes"
+            android:id="@+id/minutes1"
             android:textSize="30sp"
             android:textColor="#FFFFFF"
             android:backgroundTint="@color/back"
             android:textStyle="bold"
-            android:layout_width="50dp"
+            android:layout_width="30dp"
+            android:textAlignment="center"
+            android:layout_height="50dp"
+            android:background="@drawable/round_back" />
+
+        <TextView
+            android:id="@+id/minutes2"
+            android:textSize="30sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/back"
+            android:textStyle="bold"
+            android:layout_width="30dp"
+            android:layout_marginLeft="4dp"
             android:textAlignment="center"
             android:layout_height="50dp"
             android:background="@drawable/round_back" />

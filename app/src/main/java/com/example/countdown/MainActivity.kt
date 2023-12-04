@@ -19,9 +19,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val day:TextView=findViewById(R.id.days)
-        val hour: TextView = findViewById(R.id.hours)
-        val min: TextView = findViewById(R.id.minutes)
+//        val day1:TextView=findViewById(R.id.days1)
+//        val hour1: TextView = findViewById(R.id.hours1)
+//        val min1: TextView = findViewById(R.id.minutes1)
+//        val day2:TextView=findViewById(R.id.days2)
+//        val hour2: TextView = findViewById(R.id.hours2)
+//        val min2: TextView = findViewById(R.id.minutes2)
+
         //val sec: TextView = findViewById(R.id.seconds)
 
 
@@ -31,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun fetchSystemDateTime() {
         val currentTimeMillis = System.currentTimeMillis()
-        val targetDateString = "2024-01-12T23:59:59" // Replace with your target date
+        val targetDateString = "2024-01-11T23:59:59" // Replace with your target date
         val sdf = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault())
         val targetDate = sdf.parse(targetDateString)
         val timeDifferenceMillis = targetDate.time - currentTimeMillis
@@ -76,15 +80,22 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateUI(countdownText: String) {
         val hourMinSec: List<String> = countdownText.split(":")
-        findViewById<TextView>(R.id.hours).text = hourMinSec[1]
-        findViewById<TextView>(R.id.minutes).text = hourMinSec[2]
-        findViewById<TextView>(R.id.days).text = hourMinSec[0]
+        findViewById<TextView>(R.id.hours1).text = (hourMinSec[1].toInt() / 10).toString()
+        findViewById<TextView>(R.id.minutes1).text = (hourMinSec[2].toInt() / 10).toString()
+        findViewById<TextView>(R.id.days1).text = (hourMinSec[0].toInt() / 10).toString()
+        findViewById<TextView>(R.id.hours2).text = (hourMinSec[1].toInt() % 10).toString()
+        findViewById<TextView>(R.id.minutes2).text = (hourMinSec[2].toInt() % 10).toString()
+        findViewById<TextView>(R.id.days2).text = (hourMinSec[0].toInt() % 10).toString()
+
+
+
+
     }
 
     private fun resetUI() {
-        findViewById<TextView>(R.id.days).text = "00"
-        findViewById<TextView>(R.id.hours).text = "00"
-        findViewById<TextView>(R.id.minutes).text = "00"
+        findViewById<TextView>(R.id.days1).text = "00"
+        findViewById<TextView>(R.id.hours1).text = "00"
+        findViewById<TextView>(R.id.minutes1).text = "00"
         isTimerRunning = false
 
     }
